@@ -1,0 +1,218 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Simple Sectioned Essay Template
+% LaTeX Template
+%
+% This template has been downloaded from:
+% http://www.latextemplates.com
+%
+% Note:
+% The \lipsum[#] commands throughout this template generate dummy text
+% to fill the template out. These commands should all be removed when 
+% writing essay content.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[12pt]{article} % Default font size is 12pt, it can be changed here
+
+\usepackage{geometry} % Required to change the page size to A4
+\geometry{a4paper} % Set the page size to be A4 as opposed to the default US Letter
+
+\usepackage{graphicx} % Required for including pictures
+
+\usepackage{float} % Allows putting an [H] in \begin{figure} to specify the exact location of the figure
+\usepackage{wrapfig} % Allows in-line images such as the example fish picture
+
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
+\linespread{1.2} % Line spacing
+
+%\setlength\parindent{0pt} % Uncomment to remove all indentation from paragraphs
+
+\graphicspath{{./Pictures/}} % Specifies the directory where pictures are stored
+
+\begin{document}
+
+%----------------------------------------------------------------------------------------
+%	TITLE PAGE
+%----------------------------------------------------------------------------------------
+
+\begin{titlepage}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}} % Defines a new command for the horizontal lines, change thickness here
+
+\center % Center everything on the page
+
+\textsc{\LARGE University of Amsterdam}\\[1.5cm] % Name of your university/college
+
+\HRule \\[0.4cm]
+{ \huge \bfseries The Hugin Project}\\[0.4cm] % Title of your document
+\HRule \\[1.5cm]
+
+\begin{minipage}{0.4\textwidth}
+\begin{flushleft} \large
+\emph{Author:}\\
+Inge \textsc{Becht} % Your name
+\end{flushleft}
+\end{minipage}
+
+{\large \today}\\[3cm] % Date, change the \today to a set date if you want to be precise
+
+%\includegraphics{Logo}\\[1cm] % Include a department/university logo - this will require the graphicx package
+
+\vfill % Fill the rest of the page with whitespace
+
+\end{titlepage}
+
+%----------------------------------------------------------------------------------------
+%	TABLE OF CONTENTS
+%----------------------------------------------------------------------------------------
+
+\tableofcontents % Include a table of contents
+
+\newpage % Begins the essay on a new page instead of on the same page as the table of contents 
+
+%----------------------------------------------------------------------------------------
+%	INTRODUCTION
+%----------------------------------------------------------------------------------------
+
+\section{Introduction} % Major section
+
+When talking about reasoning with uncertainty an important part of it consists
+of how to represent random variables that are dependable of other events when finding out
+their likelihood. The Rule of Bayes shows this idea, but can be extended to the
+bayesian model in which all events that are causally related are visualised with
+their probabilities.
+
+In this essay a bayesian network is constructed to show the basic idea of its
+inner woking and to
+show its prediction capabilities of a simplified problem (with only around 10
+nodes). The subject of the
+bayesian network consits of the question \emph{Will i be moving to a new
+appartment?}. For the probabilitie assignment of the different events, a 2 year span is
+kept in mind. When assigning the values the noisy OR model (A way to assign
+probabilitie values in a condition probability table) is used when possible
+and else an explanation is given why it wouldn't make sense to use it. 
+At the end the probability of me moving in the next two year are given with some
+possible explanation for the outcome and some
+experimentation with prior knowledge will show some more possible outcomes.
+
+%------------------------------------------------
+
+\section{The idea of a Bayesian network} % Sub-section
+
+A Bayesian network is a model consisting of different nodes in which each one
+has a causal relation towards other nodes that it has a connection with. The
+direction of the arrow shows the causal relation between two points.
+
+A bayesian network has the following retraints in its construction:
+\begin{itemize}
+    \item The model should be acyclic. 
+    \item All events should have a condition probability table 
+\end{itemize}
+
+
+
+%------------------------------------------------
+
+\section{Creating the network} % Sub-section
+
+
+The first step in constructing the network was to think about all kind of events
+that are direct causes of moving to a new appartment. The following elements
+came to mind directly:
+
+\begin{itemize}
+    \item Money fluctuation
+        \begin{itemize}
+            \item Earning more
+            \item Earning less
+            \item Earning the same
+        \end{itemize}
+    \item Noisy neighbours
+    \item House becomes unlivable
+\end{itemize}
+
+The probability of these events were hereafter added towards
+
+%------------------------------------------------
+
+\subsection{Occuring problems} % Sub-sub-section
+
+
+
+%------------------------------------------------
+
+\subsubsection{ Adding The money to the network} 
+
+
+%----------------------------------------------------------------------------------------
+%	MAJOR SECTION 1
+%----------------------------------------------------------------------------------------
+
+\section{Content Section} % Major section
+
+
+%------------------------------------------------
+
+\subsection{Subsection 1} % Sub-section
+
+\subsubsection{Subsubsection 1} % Sub-sub-section
+
+
+%------------------------------------------------
+
+\subsubsection{Subsubsection 2} % Sub-sub-section
+
+
+%------------------------------------------------
+
+\subsubsection{Subsubsection 3} % Sub-sub-section
+
+
+
+
+
+%----------------------------------------------------------------------------------------
+%	MAJOR SECTION X - TEMPLATE - UNCOMMENT AND FILL IN
+%----------------------------------------------------------------------------------------
+
+%\section{Content Section}
+
+%\subsection{Subsection 1} % Sub-section
+
+% Content
+
+%------------------------------------------------
+
+%\subsection{Subsection 2} % Sub-section
+
+% Content
+
+%----------------------------------------------------------------------------------------
+%	CONCLUSION
+%----------------------------------------------------------------------------------------
+
+\section{Conclusion} % Major section
+
+
+%----------------------------------------------------------------------------------------
+%	BIBLIOGRAPHY
+%----------------------------------------------------------------------------------------
+
+\begin{thebibliography}{99} % Bibliography - this is intentionally simple in this template
+
+\bibitem[Figueredo and Wolf, 2009]{Figueredo:2009dg}
+Figueredo, A.~J. and Wolf, P. S.~A. (2009).
+\newblock Assortative pairing and life history strategy - a cross-cultural
+  study.
+\newblock {\em Human Nature}, 20:317--330.
+ 
+\end{thebibliography}
+
+%----------------------------------------------------------------------------------------
+
+\end{document}
