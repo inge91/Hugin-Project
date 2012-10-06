@@ -1,0 +1,340 @@
+Mon Oct  1 21:15:19 2012
+
+
+Moral links:
+
+    Marrying Pests and Earthquake
+    Marrying Fire_Outbreak and Earthquake
+    Marrying Fire_Outbreak and Pests
+    Marrying Noisy_surrounding and Current_House_Unlivable
+    Marrying Marrying_Rich_Man and Current_House_Unlivable
+    Marrying Marrying_Rich_Man and Noisy_surrounding
+    Marrying Getting_Job and Marrying_Rich_Man
+    Marrying Inheritance and Marrying_Rich_Man
+    Marrying Inheritance and Getting_Job
+    Marrying Money_Fluctuation and Current_House_Unlivable
+    Marrying Money_Fluctuation and Noisy_surrounding
+
+
+Triangulating prime component with 2 members:
+    Graduating, Getting_Job
+This component is a clique of cost 4
+
+Triangulating prime component with 4 members:
+    Marrying_Rich_Man, Getting_Job, Inheritance, Money_Fluctuation
+This component is a clique of cost 24
+
+Triangulating prime component with 2 members:
+    Tuba_Playing_Neighbour, Noisy_surrounding
+This component is a clique of cost 4
+
+Triangulating prime component with 4 members:
+    Earthquake, Pests, Fire_Outbreak, Current_House_Unlivable
+This component is a clique of cost 16
+
+Triangulating prime component with 5 members:
+    Current_House_Unlivable, Noisy_surrounding, Marrying_Rich_Man,
+    Money_Fluctuation, Moving
+This component is a clique of cost 48
+
+
+Total cost of triangulation for all prime components is 96
+
+
+Elimination sequence:
+
+    Fire_Outbreak
+    Pests
+    Earthquake
+    Tuba_Playing_Neighbour
+    Moving
+    Noisy_surrounding
+    Current_House_Unlivable
+    Inheritance
+    Money_Fluctuation
+    Marrying_Rich_Man
+    Graduating
+    Getting_Job
+
+
+Cliques:
+
+Clique 5, 2 members, table size = 4:
+    Getting_Job, Graduating
+
+Clique 4, 4 members, table size = 24:
+    Getting_Job, Marrying_Rich_Man, Money_Fluctuation, Inheritance
+
+Clique 3, 5 members, table size = 48:
+    Marrying_Rich_Man, Money_Fluctuation, Current_House_Unlivable,
+    Noisy_surrounding, Moving
+
+Clique 2, 2 members, table size = 4:
+    Noisy_surrounding, Tuba_Playing_Neighbour
+
+Clique 1, 4 members, table size = 16:
+    Current_House_Unlivable, Earthquake, Pests, Fire_Outbreak
+
+Total clique table size: 96
+
+
+The junction forest:
+
+Creating junction tree with clique 5 as root ...
+
+Cliques 4 and 5 linked, separator has 1 member and table size = 2:
+    Getting_Job
+
+Cliques 3 and 4 linked, separator has 2 members and table size = 6:
+    Marrying_Rich_Man, Money_Fluctuation
+
+Cliques 2 and 3 linked, separator has 1 member and table size = 2:
+    Noisy_surrounding
+
+Cliques 1 and 3 linked, separator has 1 member and table size = 2:
+    Current_House_Unlivable
+
+
+Assignment of potentials to cliques:
+
+    Node Earthquake assigned to clique 1
+    Node Pests assigned to clique 1
+    Node Fire_Outbreak assigned to clique 1
+    Node Tuba_Playing_Neighbour assigned to clique 2
+    Node Current_House_Unlivable assigned to clique 1
+    Node Noisy_surrounding assigned to clique 2
+    Node Marrying_Rich_Man assigned to clique 4
+    Node Graduating assigned to clique 5
+    Node Getting_Job assigned to clique 5
+    Node Inheritance assigned to clique 4
+    Node Money_Fluctuation assigned to clique 4
+    Node Moving assigned to clique 3
+
+
+Checking conditional probability potentials:
+
+Warning: Conditional distributions for Moving sum to different values:
+    min = 0.95
+    max = 1
+
+
+Beliefs for chance nodes:
+
+    Earthquake:
+	True       0.3
+	False      0.7
+
+    Pests:
+	True       0.2
+	False      0.8
+
+    Fire_Outbreak:
+	True       0.01
+	False      0.99
+
+    Tuba_Playing_Neighbour:
+	True       0.02
+	False      0.98
+
+    Current_House_Unlivable:
+	True       0.16529
+	False      0.83471
+
+    Noisy_surrounding:
+	True       0.5096
+	False      0.4904
+
+    Marrying_Rich_Man:
+	True       0.01
+	False      0.99
+
+    Graduating:
+	True       0.8
+	False      0.2
+
+    Getting_Job:
+	True       0.68
+	False      0.32
+
+    Inheritance:
+	True       0.1
+	False      0.9
+
+    Money_Fluctuation:
+	Higher     0.586249
+	Same       0.311979
+	Lower      0.101772
+
+    Moving:
+	True       0.545875
+	False      0.454125
+Mon Oct  1 21:23:32 2012
+
+
+Moral links:
+
+    Marrying Pests and Earthquake
+    Marrying Fire_Outbreak and Earthquake
+    Marrying Fire_Outbreak and Pests
+    Marrying Noisy_surrounding and Current_House_Unlivable
+    Marrying Marrying_Rich_Man and Current_House_Unlivable
+    Marrying Marrying_Rich_Man and Noisy_surrounding
+    Marrying Getting_Job and Marrying_Rich_Man
+    Marrying Inheritance and Marrying_Rich_Man
+    Marrying Inheritance and Getting_Job
+    Marrying Money_Fluctuation and Current_House_Unlivable
+    Marrying Money_Fluctuation and Noisy_surrounding
+
+
+Triangulating prime component with 2 members:
+    Graduating, Getting_Job
+This component is a clique of cost 4
+
+Triangulating prime component with 4 members:
+    Marrying_Rich_Man, Getting_Job, Inheritance, Money_Fluctuation
+This component is a clique of cost 24
+
+Triangulating prime component with 2 members:
+    Tuba_Playing_Neighbour, Noisy_surrounding
+This component is a clique of cost 4
+
+Triangulating prime component with 4 members:
+    Earthquake, Pests, Fire_Outbreak, Current_House_Unlivable
+This component is a clique of cost 16
+
+Triangulating prime component with 5 members:
+    Current_House_Unlivable, Noisy_surrounding, Marrying_Rich_Man,
+    Money_Fluctuation, Moving
+This component is a clique of cost 48
+
+
+Total cost of triangulation for all prime components is 96
+
+
+Elimination sequence:
+
+    Fire_Outbreak
+    Pests
+    Earthquake
+    Tuba_Playing_Neighbour
+    Moving
+    Noisy_surrounding
+    Current_House_Unlivable
+    Inheritance
+    Money_Fluctuation
+    Marrying_Rich_Man
+    Graduating
+    Getting_Job
+
+
+Cliques:
+
+Clique 5, 2 members, table size = 4:
+    Getting_Job, Graduating
+
+Clique 4, 4 members, table size = 24:
+    Getting_Job, Marrying_Rich_Man, Money_Fluctuation, Inheritance
+
+Clique 3, 5 members, table size = 48:
+    Marrying_Rich_Man, Money_Fluctuation, Current_House_Unlivable,
+    Noisy_surrounding, Moving
+
+Clique 2, 2 members, table size = 4:
+    Noisy_surrounding, Tuba_Playing_Neighbour
+
+Clique 1, 4 members, table size = 16:
+    Current_House_Unlivable, Earthquake, Pests, Fire_Outbreak
+
+Total clique table size: 96
+
+
+The junction forest:
+
+Creating junction tree with clique 5 as root ...
+
+Cliques 4 and 5 linked, separator has 1 member and table size = 2:
+    Getting_Job
+
+Cliques 3 and 4 linked, separator has 2 members and table size = 6:
+    Marrying_Rich_Man, Money_Fluctuation
+
+Cliques 2 and 3 linked, separator has 1 member and table size = 2:
+    Noisy_surrounding
+
+Cliques 1 and 3 linked, separator has 1 member and table size = 2:
+    Current_House_Unlivable
+
+
+Assignment of potentials to cliques:
+
+    Node Earthquake assigned to clique 1
+    Node Pests assigned to clique 1
+    Node Fire_Outbreak assigned to clique 1
+    Node Tuba_Playing_Neighbour assigned to clique 2
+    Node Current_House_Unlivable assigned to clique 1
+    Node Noisy_surrounding assigned to clique 2
+    Node Marrying_Rich_Man assigned to clique 4
+    Node Graduating assigned to clique 5
+    Node Getting_Job assigned to clique 5
+    Node Inheritance assigned to clique 4
+    Node Money_Fluctuation assigned to clique 4
+    Node Moving assigned to clique 3
+
+
+Checking conditional probability potentials:
+
+Warning: Conditional distributions for Moving sum to different values:
+    min = 0.95
+    max = 1
+
+
+Beliefs for chance nodes:
+
+    Earthquake:
+	True       0.3
+	False      0.7
+
+    Pests:
+	True       0.2
+	False      0.8
+
+    Fire_Outbreak:
+	True       0.01
+	False      0.99
+
+    Tuba_Playing_Neighbour:
+	True       0.02
+	False      0.98
+
+    Current_House_Unlivable:
+	True       0.16529
+	False      0.83471
+
+    Noisy_surrounding:
+	True       0.5096
+	False      0.4904
+
+    Marrying_Rich_Man:
+	True       0.01
+	False      0.99
+
+    Graduating:
+	True       0.8
+	False      0.2
+
+    Getting_Job:
+	True       0.68
+	False      0.32
+
+    Inheritance:
+	True       0.1
+	False      0.9
+
+    Money_Fluctuation:
+	Higher     0.586249
+	Same       0.311979
+	Lower      0.101772
+
+    Moving:
+	True       0.545875
+	False      0.454125

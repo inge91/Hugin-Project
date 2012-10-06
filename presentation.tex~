@@ -1,0 +1,106 @@
+\documentclass{beamer}
+\usepackage[english]{babel}
+\usepackage[latin1]{inputenc}
+\usepackage{enumerate}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{subfigure}
+\usetheme{Warsaw}
+
+\AtBeginSection[]
+{
+  \begin{frame}
+    \frametitle{Table of Contents}
+    \tableofcontents[currentsection]
+  \end{frame}
+}
+
+\begin{document}
+\title{Prediction using Bayesian Networks}
+\author{Inge Becht}
+\institute{University of Amsterdam}
+\date{\today}
+
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Subject}
+    \begin{itemize}
+        \item{
+                Will I be moving to a new appartment?
+            }
+        \item{ Considering a 2 year span}
+        \item{ Causal relations are considerd}
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Creating the network}
+    \begin{itemize}
+        \item What causes me to move?
+            \begin{itemize}
+                \item Change in income
+                    \begin{itemize}
+                        \item lower
+                        \item higher
+                    \end{itemize}
+                \item House gets unlivable
+                \item Noisy neighbours
+                \item etc.
+            \end{itemize}
+        \item And what causes these things?
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{Modelling problems}
+    \begin{itemize}
+        \item Money gain, loss and staying the same should be considered; How to make
+            this boolean for easier calculation?
+            \begin{itemize}
+                \item Solution: break up into multiple dependable nodes
+            \end{itemize}
+        \item Can noisy OR be implemented?
+    \end{itemize}
+\end{frame}
+
+
+\begin{frame}{The final network}
+\end{frame}
+
+\begin{frame}{Noisy OR}
+  \begin{itemize}
+      \item Not all elements are considered (More variables possible when
+          considering money gain)
+      \item How to implement noisy OR in case of 3 possible values instead of
+          boolean?
+    \item Using NOISY OR to indicate house livability seems to work very well
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{noisy OR implemented}
+E = Earthquake, P = Pest, F = Fire, U = Unlivable conditions\\
+\hspace{5 mm}
+\begin{centering}
+\begin{table}
+\begin{tabular}{|lll|ll|}
+  \hline
+  E & P & F & $\mu(U)$ & $\mu(\neg U)$   \\ \hline
+  0 & 0 & 0 & 0 & 1 \\
+  0 & 0 & 1  &  $0.6$       & $0.4$       \\ 
+  0 & 1 & 0  &  $0.8$       & $0.2$       \\
+  1 & 0 & 0  &  $0.001$     & $0.999$     \\                     
+  0 & 1 & 1  &  $0.92$      & $0.4 * 0.2 =0.08$\\       
+  $1$ &$ 0$ &$ 1$  &  $0.6004$    & $0.999 * 0.4 = 0.3996$\\   
+  1 & 1 & 0  &  $0.8002$    & $0.999 * 0.2 = 0.1998$\\         
+  1 & 1 & 1  &  $0.92008$   & $0.4 * 0.2 * 0.999 = 0.07992$ \\
+  \hline
+\end{tabular}
+\caption{Probability of Unlivable conditions arising}
+\end{table}
+\end{centering}
+\end{frame} 
+
+\end{document}

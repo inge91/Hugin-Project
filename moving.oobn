@@ -1,0 +1,300 @@
+class moving
+{
+    inputs = ();
+    outputs = ();
+    node_size = (80 40);
+    HR_Desc = "";
+    HR_OOBN_CheckConsistency = "1";
+    HR_OOBN_FitExpand = "1";
+    HR_Zoom_ZoomFactor = "100";
+    HR_Groups_GroupColors = "";
+    HR_Groups_GroupNames = "";
+    HR_Groups_UserGroupsNo = "0";
+    HR_Color_Interface = "21";
+    HR_Color_Instance = "0";
+    HR_Color_Function = "4";
+    HR_Color_Utility = "36";
+    HR_Color_Decision = "17";
+    HR_Color_ContinuousChance = "48";
+    HR_Color_DiscreteChance = "16";
+    HR_Monitor_InitSD = "2";
+    HR_Monitor_Utility_Arrange = "0";
+    HR_Monitor_Mean_Variance = "1";
+    HR_Monitor_Chance_Utility = "1";
+    HR_Monitor_InitStates = "5";
+    HR_Monitor_OpenGraph = "0";
+    HR_Monitor_GraphPrecision = "100";
+    HR_Monitor_AutoUpdGraph = "0";
+    HR_Compile_MaxMinimalSeparators = "100000";
+    HR_Compile_ApproxEpsilon = "1.0E-5";
+    HR_Compile_Approximate = "0";
+    HR_Compile_SaveToMemory = "0";
+    HR_Compile_Compress = "0";
+    HR_Compile_TriangMethod = "0";
+    HR_Propagate_AutoNormal = "1";
+    HR_Propagate_AutoSum = "1";
+    HR_Propagate_Auto = "1";
+    HR_Font_Italic = "0";
+    HR_Font_Weight = "400";
+    HR_Font_Size = "-12";
+    HR_Font_Name = "javax.swing.plaf.FontUIResource[family=Dialog,name=Dialog,style=plain,size=12]";
+    HR_Grid_GridShow = "0";
+    HR_Grid_GridSnap = "0";
+    HR_Grid_Y = "40";
+    HR_Grid_X = "40";
+
+    node Earthquake
+    {
+	label = "";
+	position = (327 174);
+	states = ("True" "False");
+	HR_LinkMode = "[Current_House_Unlivable:0]";
+	HR_NodeSize = "(130, 40)";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    node Pests
+    {
+	label = "";
+	position = (210 130);
+	states = ("True" "False");
+	HR_LinkMode = "[Current_House_Unlivable:0]";
+	HR_NodeSize = "(114, 39)";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    node Fire_Outbreak
+    {
+	label = "";
+	position = (89 189);
+	states = ("True" "False");
+	HR_LinkControlPoints = "";
+	HR_LinkMode = "[Current_House_Unlivable:0]";
+	HR_NodeSize = "(118, 49)";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    node Tuba_Playing_Neighbour
+    {
+	label = "";
+	position = (465 93);
+	states = ("True" "False");
+	HR_NodeSize = "(182, 55)";
+	HR_LinkMode = "[Noisy_Neighbors:0][Noisy_surrounding:0]";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    node Current_House_Unlivable
+    {
+	label = "";
+	position = (210 297);
+	states = ("True" "False");
+	HR_LinkMode = "[Moving:0][Cockroaches:0]";
+	HR_NodeSize = "(185, 54)";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    node Noisy_surrounding
+    {
+	label = "";
+	position = (464 181);
+	states = ("True" "False");
+	HR_LinkMode = "[Moving:0]";
+	HR_NodeSize = "(136, 56)";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    node Marrying_Rich_Man
+    {
+	label = "";
+	position = (828 157);
+	states = ("True" "False");
+	HR_LinkMode = "[Making_Money:0][Money_Fluctuation:0][Moving:0]";
+	HR_NodeSize = "(152, 62)";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    node Graduating
+    {
+	label = "";
+	position = (667 46);
+	states = ("True" "False");
+	HR_LinkControlPoints = "";
+	HR_NodeSize = "(150, 52)";
+	HR_LinkMode = "[Getting_Job:0]";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    node Getting_Job
+    {
+	label = "";
+	position = (668 158);
+	states = ("True" "False");
+	HR_LinkMode = "[Making_Money:0][Money_Fluctuation:0]";
+	HR_NodeSize = "(105, 51)";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    node Inheritance
+    {
+	label = "";
+	position = (921 314);
+	states = ("True" "False");
+	HR_LinkMode = "[Making_Money:0][Money_Fluctuation:0]";
+	HR_NodeSize = "(158, 76)";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    node Money_Fluctuation
+    {
+	label = "";
+	position = (669 315);
+	states = ("Higher" "Same" "Lower");
+	HR_LinkMode = "[Moving:0]";
+	HR_NodeSize = "(151, 55)";
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    node Moving
+    {
+	label = "";
+	position = (467 368);
+	states = ("True" "False");
+	HR_Group = "0";
+	HR_Desc = "";
+	HR_State_1 = "";
+	HR_State_0 = "";
+    }
+
+    potential (Earthquake)
+    {
+	data = ( 0.3 0.7 );
+    }
+
+    potential (Pests)
+    {
+	data = ( 0.2 0.8 );
+    }
+
+    potential (Fire_Outbreak)
+    {
+	data = ( 0.01 0.99 );
+    }
+
+    potential (Tuba_Playing_Neighbour)
+    {
+	data = ( 0.02 0.98 );
+    }
+
+    potential (Current_House_Unlivable | Earthquake Pests Fire_Outbreak)
+    {
+	data = (((( 0.92008 0.07992 )	%  Earthquake=True  Pests=True  Fire_Outbreak=True
+		  ( 0.8002 0.1998 ))	%  Earthquake=True  Pests=True  Fire_Outbreak=False
+		 (( 0.6004 0.3996 )	%  Earthquake=True  Pests=False  Fire_Outbreak=True
+		  ( 0.001 0.999 )))	%  Earthquake=True  Pests=False  Fire_Outbreak=False
+		((( 0.92 0.08 )	%  Earthquake=False  Pests=True  Fire_Outbreak=True
+		  ( 0.8 0.2 ))	%  Earthquake=False  Pests=True  Fire_Outbreak=False
+		 (( 0.6 0.4 )	%  Earthquake=False  Pests=False  Fire_Outbreak=True
+		  ( 0 1 ))));	%  Earthquake=False  Pests=False  Fire_Outbreak=False
+    }
+
+    potential (Noisy_surrounding | Tuba_Playing_Neighbour)
+    {
+	data = (( 0.98 0.02 )	%  Tuba_Playing_Neighbour=True
+		( 0.5 0.5 ));	%  Tuba_Playing_Neighbour=False
+    }
+
+    potential (Marrying_Rich_Man)
+    {
+	data = ( 0.01 0.99 );
+    }
+
+    potential (Graduating)
+    {
+	data = ( 0.8 0.2 );
+    }
+
+    potential (Getting_Job | Graduating)
+    {
+	data = (( 0.8 0.2 )	%  Graduating=True
+		( 0.2 0.8 ));	%  Graduating=False
+    }
+
+    potential (Inheritance)
+    {
+	data = ( 0.1 0.9 );
+    }
+
+    potential (Money_Fluctuation | Marrying_Rich_Man Inheritance Getting_Job)
+    {
+	data = (((( 0.99 0.01 0 )	%  Marrying_Rich_Man=True  Inheritance=True  Getting_Job=True
+		  ( 0.9 0.1 0 ))	%  Marrying_Rich_Man=True  Inheritance=True  Getting_Job=False
+		 (( 1 0 0 )	%  Marrying_Rich_Man=True  Inheritance=False  Getting_Job=True
+		  ( 0.9 0.1 0 )))	%  Marrying_Rich_Man=True  Inheritance=False  Getting_Job=False
+		((( 0.8 0.1 0.1 )	%  Marrying_Rich_Man=False  Inheritance=True  Getting_Job=True
+		  ( 0.3 0.4 0.3 ))	%  Marrying_Rich_Man=False  Inheritance=True  Getting_Job=False
+		 (( 0.8 0.2 0 )	%  Marrying_Rich_Man=False  Inheritance=False  Getting_Job=True
+		  ( 0.1 0.6 0.3 ))));	%  Marrying_Rich_Man=False  Inheritance=False  Getting_Job=False
+    }
+
+    potential (Moving | Marrying_Rich_Man Current_House_Unlivable Noisy_surrounding Money_Fluctuation)
+    {
+	data = ((((( 1 0 )	%  Marrying_Rich_Man=True  Current_House_Unlivable=True  Noisy_surrounding=True  Money_Fluctuation=Higher
+		   ( 0.99 0.01 )	%  Marrying_Rich_Man=True  Current_House_Unlivable=True  Noisy_surrounding=True  Money_Fluctuation=Same
+		   ( 0.9 0.1 ))	%  Marrying_Rich_Man=True  Current_House_Unlivable=True  Noisy_surrounding=True  Money_Fluctuation=Lower
+		  (( 0.95 0.05 )	%  Marrying_Rich_Man=True  Current_House_Unlivable=True  Noisy_surrounding=False  Money_Fluctuation=Higher
+		   ( 0.95 0.05 )	%  Marrying_Rich_Man=True  Current_House_Unlivable=True  Noisy_surrounding=False  Money_Fluctuation=Same
+		   ( 0.9 0.1 )))	%  Marrying_Rich_Man=True  Current_House_Unlivable=True  Noisy_surrounding=False  Money_Fluctuation=Lower
+		 ((( 0.9 0.1 )	%  Marrying_Rich_Man=True  Current_House_Unlivable=False  Noisy_surrounding=True  Money_Fluctuation=Higher
+		   ( 0.85 0.15 )	%  Marrying_Rich_Man=True  Current_House_Unlivable=False  Noisy_surrounding=True  Money_Fluctuation=Same
+		   ( 0.9 0.1 ))	%  Marrying_Rich_Man=True  Current_House_Unlivable=False  Noisy_surrounding=True  Money_Fluctuation=Lower
+		  (( 0.9 0.1 )	%  Marrying_Rich_Man=True  Current_House_Unlivable=False  Noisy_surrounding=False  Money_Fluctuation=Higher
+		   ( 0.8 0.2 )	%  Marrying_Rich_Man=True  Current_House_Unlivable=False  Noisy_surrounding=False  Money_Fluctuation=Same
+		   ( 0.8 0.2 ))))	%  Marrying_Rich_Man=True  Current_House_Unlivable=False  Noisy_surrounding=False  Money_Fluctuation=Lower
+		(((( 0.9 0.1 )	%  Marrying_Rich_Man=False  Current_House_Unlivable=True  Noisy_surrounding=True  Money_Fluctuation=Higher
+		   ( 0.5 0.5 )	%  Marrying_Rich_Man=False  Current_House_Unlivable=True  Noisy_surrounding=True  Money_Fluctuation=Same
+		   ( 0.9 0.1 ))	%  Marrying_Rich_Man=False  Current_House_Unlivable=True  Noisy_surrounding=True  Money_Fluctuation=Lower
+		  (( 0.9 0.1 )	%  Marrying_Rich_Man=False  Current_House_Unlivable=True  Noisy_surrounding=False  Money_Fluctuation=Higher
+		   ( 0.85 0.1 )	%  Marrying_Rich_Man=False  Current_House_Unlivable=True  Noisy_surrounding=False  Money_Fluctuation=Same
+		   ( 0.8 0.2 )))	%  Marrying_Rich_Man=False  Current_House_Unlivable=True  Noisy_surrounding=False  Money_Fluctuation=Lower
+		 ((( 0.7 0.3 )	%  Marrying_Rich_Man=False  Current_House_Unlivable=False  Noisy_surrounding=True  Money_Fluctuation=Higher
+		   ( 0.1 0.9 )	%  Marrying_Rich_Man=False  Current_House_Unlivable=False  Noisy_surrounding=True  Money_Fluctuation=Same
+		   ( 0.5 0.5 ))	%  Marrying_Rich_Man=False  Current_House_Unlivable=False  Noisy_surrounding=True  Money_Fluctuation=Lower
+		  (( 0.7 0.3 )	%  Marrying_Rich_Man=False  Current_House_Unlivable=False  Noisy_surrounding=False  Money_Fluctuation=Higher
+		   ( 0 1 )	%  Marrying_Rich_Man=False  Current_House_Unlivable=False  Noisy_surrounding=False  Money_Fluctuation=Same
+		   ( 0.7 0.3 )))));	%  Marrying_Rich_Man=False  Current_House_Unlivable=False  Noisy_surrounding=False  Money_Fluctuation=Lower
+    }
+} % class moving
