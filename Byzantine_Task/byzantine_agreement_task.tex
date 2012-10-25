@@ -1,0 +1,121 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Simple Sectioned Essay Template
+% LaTeX Template
+%
+% This template has been downloaded from:
+% http://www.latextemplates.com
+%
+% Note:
+% The \lipsum[#] commands throughout this template generate dummy text
+% to fill the template out. These commands should all be removed when 
+% writing essay content.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[12pt]{article} % Default font size is 12pt, it can be changed here
+
+\usepackage{geometry} % Required to change the page size to A4
+\usepackage{subfigure}
+\usepackage{placeins}
+\geometry{a4paper} % Set the page size to be A4 as opposed to the default US Letter
+
+\usepackage{graphicx} % Required for including pictures
+
+\usepackage{float} % Allows putting an [H] in \begin{figure} to specify the exact location of the figure
+\usepackage{wrapfig} % Allows in-line images such as the example fish picture
+
+\usepackage{lipsum} % Used for inserting dummy 'Lorem ipsum' text into the template
+
+\linespread{1.2} % Line spacing
+
+%\setlength\parindent{0pt} % Uncomment to remove all indentation from paragraphs
+
+\graphicspath{{./Pictures/}} % Specifies the directory where pictures are stored
+
+\begin{document}
+
+\begin{enumerate}
+    \item  The idea of common knowledge is important because it is able to
+        extend the idea of collective knowledge(where everybody knows $\phi$) with recursion, so that
+        everybody knows that \dots  everybody knows $\phi$.
+        This creates a new way of reasoning within a group, as more information
+        is available to each individual about what is known.
+        In the paper it is stated that this idea of common knowledge makes
+        driving on the road possible(because everybody has to know that
+        everybody else knows the rule to even dare to drive).
+        Another possible application is in case of negotiation. If I know that
+        you know how much an item  is worth, and you know that, it seems both parties
+        will get a fair deal. 
+    \item proposition p never seems to be common knowledge as in case u
+        
+    \item 
+        \begin{equation}
+        (M,s) \models C_G\varphi \Leftrightarrow (M,s) \models E_G(\varphi \wedge
+        C_G\phi) 
+        \end{equation}
+        Can be rewritten as:
+        \begin{equation}
+            (M,s) \models C_G\varphi \Leftrightarrow (M,s) \models E_G(\varphi) \wedge
+            E_G (C_G\varphi) 
+        \end{equation}
+        Because of the definition on page 43 this can be rewritten as:
+        \begin{equation}
+            (M,s) \models C_G\varphi \Leftrightarrow (M,s) \models E_G(\varphi) \wedge
+            E_G(E_G^{k-1}\varphi) \mbox{ for } k = 2,3, ... 
+        \end{equation}
+        When we set $(M,s)\models C_G\varphi$ to true this can be rewritten as:
+        \begin{equation}
+            (M,s) \models E_G^k\varphi  \mbox{ for } k = 1,2 ... \Leftrightarrow (M,s) \models E_G(\varphi) \wedge
+            E_G(E_G^{k-1}\varphi) \mbox{ for } k = 2, 3, ... 
+        \end{equation}
+        More rewriting:
+        \begin{equation}
+            (M,s) \models E_G^k\varphi  \mbox{ for } k = (1,2 ... \Leftrightarrow (M,s) \models E_G(\varphi) \wedge
+            E_G^{k}\varphi 	\mbox{ for } k = 1, 2, ...  
+        \end{equation}
+        If $E_G^k$ is true then $E_G(\varphi)$ as well, so that:
+        \begin{equation}
+            (M,s) \models E_G^k\varphi  \mbox{ for } k = 1, 2, ... \Leftrightarrow (M,s)
+            \models
+            E_G^{k}\varphi \mbox{ for } k = 1, 2...  
+        \end{equation}
+
+        In case $(M,s) \models C_G\varphi$ is not set to true the derivation
+        could not be made, hence the case would be that $(M,s) \models
+        \lnot E_G(\varphi \wedge C_G\varphi$
+    \item
+        For an attack to happen not only does the second commander have to receive the
+        messenger, but also does the first commander need to know the second
+        commander knows that he wants to plan the attack and agrees to it. The
+        second commander than nees to know that de first commandeer knows this
+        and so on. Common knowledge in this case would enable the attack
+        happening as then both parties would know that the other party new
+        indefintely.
+    \item \emph{Synchronous} in this problem means that all nonfaulty(not
+        lying) generals after the same amount of time choose for the same time
+        to attack\\
+        \emph{Searching for agreement} is the process for the nonfaulty
+        processors to agree upon one and the same strategy, while the fault
+        processors in \emph{Byzantine failure} mode try to confsue these faulty
+        processesors without their knowledge.\\
+        \emph{Point to point} means that all generals are fully connected to all
+        other generals, and so is the messaging.
+    \item In the paper is stated that always SBA can me made, but in the case of \emph{Byzantine failure}
+        mode for faulty processors there have to be at least $n = 3*f + 1$ more
+        nonfaulty processors than faulty ones (where n is nonfaulty and f is
+        faulty), else no agreement can be made. This is only true when
+        signatures can be forgeable(if a faulty processor can seem to be an
+        unfaulty one), else SBA can be made with arbitrary many
+        faulty processors. The SBA can be made in f+1 rounds, where f is the
+        upper bound of faulty processors in the system.
+         
+        
+
+\end{enumerate}
+\end{document}
+
